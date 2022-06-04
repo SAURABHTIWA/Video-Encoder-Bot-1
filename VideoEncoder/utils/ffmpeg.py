@@ -69,7 +69,7 @@ async def encode(filepath):
         preset = '-preset medium'
 
     # Optional
-    video_opts = f'-tune {t} -map 0:v? -map_chapters 0 -map_metadata 0'
+    video_opts = f'-filter_complex "[0:v]drawtext=fontfile=font.ttf:text='t.me/Funimation_Anime':fontsize=15:fontcolor=ffffff:alpha='if(lt(t,0),0,if(lt(t,5),(t-0)/5,if(lt(t,15),1,if(lt(t,20),(5-(t-15))/5,0))))':x=w-text_w-15:y=15" -tune {t} -map 0:v? -map_chapters 0 -metadata "@Funimation_anime'
 
     # Copy Subtitles
     subs_i = get_codec(filepath, channel='s:0')
