@@ -61,7 +61,7 @@ async def handle_task(message: Message):
     await on_task_complete()
 
  
-async def handle_upload(new_file, message, msg, chat_id):
+async def handle_upload(new_file, message, msg):
     print(f'[Upload]: {new_file}')
     # Variables 
    
