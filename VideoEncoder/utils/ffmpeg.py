@@ -72,7 +72,7 @@ async def encode(filepath):
     video_opts = f'-tune {t} -map 0:v? -map_chapters 0 -map_metadata 0'
 
     # Copy Subtitles
-    Subtitles = -vf "subtitles=filepath.srt"
+    Subtitles = -vf subtitles=filepath
 
     # Audio
     a_i = get_codec(filepath, channel='a:0')
