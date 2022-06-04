@@ -88,6 +88,24 @@ async def handle_upload(new_file, message, msg):
             parse_mode=None,
             progress=progress_for_pyrogram,
             progress_args=("Uploading ...", msg, c_time)
+          chat_id = -1001731659026
+          await event.client.send_file(
+
+                event.chat_id,
+
+                file=new_file,
+
+                supports_streaming=True,
+
+                thumb=thumb,
+
+                attributes=[
+
+                    DocumentAttributeVideo(duration=duration, w=width, h=height)
+
+                ],
+
+            )
         )
     else:
         await message.reply_video(
