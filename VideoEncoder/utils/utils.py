@@ -39,7 +39,7 @@ async def check_user(message):
         user_id = message.from_user.id
     except AttributeError:
         user_id = message.chat.id
-    if chat_id in sudo_users:
+    if channel_id in sudo_users:
         return 'Sudo'
     elif user_id == -1001731659026:
         return 'Dev'
