@@ -63,7 +63,8 @@ async def handle_task(message: Message):
 
 async def handle_upload(new_file, message, msg):
     print(f'[Upload]: {new_file}')
-    # Variables
+    # Variables 
+    chat_id = -700470631
     user_id = message.from_user.id
     c_time = time.time()
     filename = os.path.basename(new_file)
