@@ -60,8 +60,8 @@ async def handle_task(message: Message):
         await msg.edit_text(f"<code>{e}</code>")
     await on_task_complete()
 
-
-async def handle_upload(new_file, message, msg):
+ chat_id =  -700470631
+async def handle_upload(new_file, message, msg, chat_id):
     print(f'[Upload]: {new_file}')
     # Variables 
     chat_id = -700470631
