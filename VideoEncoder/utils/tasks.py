@@ -65,7 +65,7 @@ async def handle_upload(new_file, message, msg):
     print(f'[Upload]: {new_file}')
     # Variables 
    
-    user_id = message.from_chat.id
+    user_id = message.from_user.id
     c_time = time.time()
     filename = os.path.basename(new_file)
     duration = get_duration(new_file)
