@@ -51,7 +51,7 @@ async def encode(filepath):
         print('[Encode]: ' + filepath)
 
     # Codec and Bits
-    codec = '-c:v libx265 -pix_fmt yuv420p'
+    codec = '-c:v libx264 -pix_fmt yuv420p'
 
     # CRF
     crf = f'-crf {c}'
@@ -76,7 +76,7 @@ async def encode(filepath):
     if subs_i == []:
         subtitles = ''
     else:
-        subtitles = '-c:s copy -map 0:s?'
+        subtitles = '-vf "subtitiles = sub.ass" '
 
     # Audio
     a_i = get_codec(filepath, channel='a:0')
