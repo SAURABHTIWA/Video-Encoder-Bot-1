@@ -76,7 +76,7 @@ async def encode(filepath):
     if subs_i == []:
         subtitles = ''
     else:
-        subtitles = '-vf "subtitiles = output_filepath" '
+        subtitles = '-vf "filepath" '
 
     # Audio
     a_i = get_codec(filepath, channel='a:0')
