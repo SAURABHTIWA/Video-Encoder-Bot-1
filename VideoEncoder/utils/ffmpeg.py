@@ -84,7 +84,7 @@ async def encode(filepath):
 
     # Codec and Bits
 
-    codec = '-c:v libx264 -pix_fmt yuv420p'
+    codec = '-c:v libx265 -pix_fmt yuv420p'
 
     # CRF
 
