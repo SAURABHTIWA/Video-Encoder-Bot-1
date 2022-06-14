@@ -44,7 +44,7 @@ async def handle_task(message: Message):
         print(f'[Download]: {filepath}')
         msg = await message.reply_text("<code>Downloading video...</code>")
         c_time = time.time()
-        filepath = await message.download(
+        filepath = await message.encode(
             file_name=download_dir,
             progress=progress_for_pyrogram
             Progress_args=("Encoding...", msg, c_time))
