@@ -42,15 +42,7 @@ async def handle_task(message: Message):
             progress=progress_for_pyrogram,
             progress_args=("Downloading...", msg, c_time))
         print(f'[Download]: {filepath}')
-        msg = await message.reply_text("<code>Downloading video...</code>")
-        c_time = time.time()
-        filepath = await message.encode(
-            file_name=download_dir,
-            progress=progress_for_pyrogram
-            Progress_args=("Encoding...", msg, c_time))
-        Print(f'[Download]: {filepath}')
-        msg = await message.reply_text("<code>Encoding video...</code>")
-        c_time = time.time()
+        await msg.edit_text('<code>Encoding...</code>')
         new_file = await encode(filepath)
         if new_file:
             await msg.edit_text("<code>Video Encoded, getting metadata...</code>")
