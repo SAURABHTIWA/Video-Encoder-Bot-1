@@ -43,6 +43,8 @@ async def handle_task(message: Message):
             progress_args=("Downloading...", msg, c_time))
         print(f'[Download]: {filepath}')
         await msg.edit_text('<code>Encoding...</code>')
+        Progress_args=("Encoding...", msg, c_time))
+        Print(f'[Download]: {filepath}')
         new_file = await encode(filepath)
         if new_file:
             await msg.edit_text("<code>Video Encoded, getting metadata...</code>")
